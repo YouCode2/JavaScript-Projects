@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: aliceblue;
+}
+.container{
+    display: flex;
+    height: 50px;
+    width: 300px;
+    border-radius: 50px;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .2) , -5px -5px 10px rgba(255, 255, 255, .5);
+    position: relative;
+    transition: 1.5s;
+}
+.magnify{
+    width: 28px;
+    position: absolute;
+    left: 15px;
+    cursor: pointer;
+}
+.microphone{
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    transition: .4s;
+    transition-delay: .6s;
+}
+.input{
+    width: 100%;
+    margin: 10px 50px;
+    border: none;
+    background-color: aliceblue;
+    color: rgb(100, 100, 100);
+    outline: none;
+    transition: 1s;
+    transition-delay: .2s;
+}
+.change.container{
+    width: 50px;
+    transition: 1.2s;
+}
+.change .microphone{
+    width: 0;
+}
+.change .input{
+    width: 0;
+}
+
+
