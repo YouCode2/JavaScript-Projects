@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    background-color: #ddd;
+    color: gold;
+
+}
+
+.clock {
+    height: 360px;
+    width: 360px;
+    border-radius: 50%;
+    background-color: slategrey;
+    position: relative;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .7);
+
+    border: 5px solid rgb(88, 88, 88);
+}
+
+.logo {
+    position: absolute;
+    top: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 2;
+}
+
+.numbers {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, .7);
+}
+
+.twelve {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.six {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.three {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nine {
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.arrows::before {
+    content: "";
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: silver;
+    z-index: 4;
+}
+
+.arrows div {
+    position: absolute;
+    background-color: white;
+    width: 7px;
+    height: 120px;
+    transform-origin: bottom center;
+    z-index: 3;
+    bottom: 50%;
+    border-radius: 50% 50% 0 0;
+    border: 1px solid black;
+
+}
+
+.arrows .hour {
+    height: 80px;
+    transform: rotate(30deg);
+}
+
+.arrows .second {
+    transform: rotate(240deg);
+    background: goldenrod;
+}
