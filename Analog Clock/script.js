@@ -20,7 +20,7 @@ function updateClock() {
     let minutedeg = (m / 60) * 360;
     minuteE2.style.transform = `rotate(${minutedeg}deg)`;
 
-    let hourdeg = (h / 24) * 360;
+    let hourdeg = (h / 12) * 360;
     hourE1.style.transform = `rotate(${hourdeg}deg)`;
 }
 updateClock()
