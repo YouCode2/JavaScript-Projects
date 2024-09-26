@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.container {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    background-color: rgb(167, 164, 164);
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container.active {
+    height: 200px;
+    width: 200px;
+}
+
+.container span {
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    position: absolute;
+    transform: translate(calc(12px * var(--x)), calc(12px * var(--y)));
+    transition: transform 0.5s, height 0.5s, width 0.5s, background 0.5s;
+    transition-delay: calc(0.1s *var(--i));
+}
+
+.container.active span {
+    transform: translate(calc(60px * var(--x)), calc(60px * var(--y)));
+    height: 45px;
+    width: 45px;
+    background: grey;
+
+}
+
+.container span i {
+    font-size: 0rem;
+    transition: 0.5s;
+}
+
+.container.active span i {
+    font-size: 1.40rem;
+    color: #fff;
+}
+
+.container.active span:hover i {
+    color: greenyellow;
+    filter: drop-shadow(0 0 2px greenyellow) drop-shadow(0 0 5px greenyellow) drop-shadow(0 0 15px greenyellow);
+}
