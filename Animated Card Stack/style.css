@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #a56142;
+    transition: .3s;
+}
+
+.card-stack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 500px;
+}
+
+.card {
+    height: 400px;
+    width: 300px;
+    margin: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    filter: drop-shadow(8px 10px 8px rgba(0, 0, 0, .2));
+    transition: .3s;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+
+}
+
+.card button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.card-stack.animate-card5 .card.five {
+    animation: five 1s ease-in-out forwards;
+    overflow: hidden;
+}
+
+@keyframes five {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(300px);
+    }
+
+    100% {
+        transform: translateX(10px) translateY(-10px) rotate(2deg);
+        opacity: 0.6;
+    }
+}
+
+.card-stack.animate-card5 .card.four {
+    animation: forfive ease-in-out forwards;
+    animation-delay: .5s;
+}
+
+@keyframes forfive {
+    0% {
+        z-index: 0;
+    }
+
+    100% {
+        z-index: 1;
+    }
+}
+
+.card-stack.animate-card4 .card.four {
+    animation: four 1s ease-in-out forwards;
+}
+
+@keyframes four {
+    0% {
+        z-index: 1;
+        transform: translateX(0);
+
+    }
+
+    50% {
+        transform: translateX(300px);
+    }
+
+    100% {
+        transform: translateX(15px) translateY(-12px) rotate(4deg);
+        opacity: 0.5;
+    }
+}
+
+.card-stack.animate-card4 .card.three {
+    animation: forfour ease-in-out forwards;
+}
+
+@keyframes forfour {
+    0% {
+        z-index: 0;
+    }
+
+    100% {
+        z-index: 1;
+    }
+}
+
+.card-stack.animate-card3 .card.three {
+    animation: three 1s ease-in-out forwards;
+}
+
+@keyframes three {
+    0% {
+        z-index: 2;
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(300px);
+    }
+
+    100% {
+        transform: translateX(20px) translateY(-14px) rotate(6deg);
+        opacity: 0.4;
+    }
+}
+
+.card-stack.animate-card3 .card.two {
+    animation: forthree ease-in-out forwards;
+}
+
+@keyframes forthree {
+    0% {
+        z-index: 0;
+    }
+
+    100% {
+        z-index: 1;
+    }
+}
+
+.card-stack.animate-card2 .card.two {
+    animation: two 1s ease-in-out forwards;
+}
+
+@keyframes two {
+    0% {
+        z-index: 3;
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(300px);
+    }
+
+    100% {
+        transform: translateX(25px) translateY(-16px) rotate(8deg);
+        opacity: 0.3;
+    }
+}
+
+.card-stack.animate-card2 .card.one {
+    animation: fortwo ease-in-out forwards;
+}
+
+@keyframes fortwo {
+    0% {
+        z-index: 0;
+    }
+
+    100% {
+        z-index: 1;
+        rotate: 0;
+    }
+}
+
+.card-stack.animate-card1 .card.one {
+    animation: one 1s ease-in-out forwards;
+}
+
+@keyframes one {
+    0% {
+        z-index: 4;
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(300px);
+
+    }
+
+    100% {
+        transform: translateX(30px) translateY(-16px) rotate(10deg);
+        opacity: 0.2;
+    }
+}
+
+.card-stack.animate-card1 .card.five {
+    animation: forone ease-in-out forwards;
+}
+
+@keyframes forone {
+    0% {
+        z-index: 1;
+    }
+
+    100% {
+        z-index: 0;
+    }
+}
