@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- BY YouCode -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>EMI Calculator</h1>
+        <div class="input">
+            <label for="">
+                Loan Amount ₹
+            </label>
+            <input 
+            type="number" 
+            id="loan-amount" 
+            value="10000" 
+            min="10000" 
+            max="10000000">
+        </div>
+
+        <div class="input">
+            <label for="">
+                Interest Rate %
+            </label>
+            <input 
+            type="number" 
+            id="interest-rate" 
+            min="1" max="16" 
+            value="10" 
+            step=".1">
+        </div>
+
+        <div class="input">
+            <label for="">
+                Loan Tenure :
+            </label>
+            <input 
+            type="number"  
+            id="loan-tenure" 
+            value="12" 
+            min="6" 
+            max="120">
+        </div>
+        
+        <button id="btn">
+            calculate
+        </button>
+
+        <p id="result"></p>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
